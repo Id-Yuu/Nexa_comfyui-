@@ -1,13 +1,13 @@
-# Nexa - Your On-the-Go ComfyUI Companion 📱✨
+# Nexa - Your On-the-Go ComfyUI Companion
 
-A sleek, responsive React Native mobile app that connects directly to your local ComfyUI server. Generate images from your phone, build dynamic UIs from JSON workflows, upload images to LoadImage nodes, and keep track of your history natively.
+A sleek, responsive React Native mobile app that connects directly to your local ComfyUI server. Generate images from your phone, build dynamic UIs from JSON workflows, upload images to LoadImage nodes.
 
 ![Nexa Screenshot](./assets/splash-icon.png)
 
 ## What does it do?
 Nexa completely changes how you interact with ComfyUI. Instead of dealing with the giant node spaghetti desktop interface when you just want to generate some images on the couch, Nexa turns your workflows into clean mobile forms. 
 
-Just give it an "API format" JSON file from ComfyUI, and it auto-detects your Prompts, Samplers, Loras, Checkpoints, and Images. It even lets you add custom magic variables (like `%trigger_word%`) so you can swap them instantly via sliders and text boxes!
+Just give it an workflow JSON file from ComfyUI, and it auto-detects your Prompts, Samplers, Loras, Checkpoints, and Images. It even lets you add custom magic variables (like `%trigger_word%`) so you can swap them instantly via sliders and text boxes!
 
 ## Features 🔥
 - **Auto-Detect Nodes**: Automatically maps Prompts, Models, Loras, and Image resolutions.
@@ -15,8 +15,6 @@ Just give it an "API format" JSON file from ComfyUI, and it auto-detects your Pr
 - **Image-to-Image Support**: Upload photos right from your phone's gallery directly to `LoadImage` nodes.
 - **Custom Overrides**: Add your own custom variables like `%my_seed%` and hook them up to sliders or text inputs.
 - **Native History Tab**: Browse past generations, view their settings (prompt, sampler info), and save/delete them.
-- **Haptic Feedback**: Clean vibrations for sliders, successful generations, and errors.
-- **Premium Glassmorphic UI**: Fully dark mode, blurry panels, and responsive design.
 
 ## How to use it 📖
 
