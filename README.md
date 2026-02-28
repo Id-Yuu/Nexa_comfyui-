@@ -9,14 +9,14 @@ Nexa completely changes how you interact with ComfyUI. Instead of dealing with t
 
 Just give it an workflow JSON file from ComfyUI, and it auto-detects your Prompts, Samplers, Loras, Checkpoints, and Images. It even lets you add custom magic variables (like `%trigger_word%`) so you can swap them instantly via sliders and text boxes!
 
-## Features 🔥
+## Features 
 - **Auto-Detect Nodes**: Automatically maps Prompts, Models, Loras, and Image resolutions.
 - **Node Reordering**: Easily change the order your text prompts and images show up in the app.
 - **Image-to-Image Support**: Upload photos right from your phone's gallery directly to `LoadImage` nodes.
 - **Custom Overrides**: Add your own custom variables like `%my_seed%` and hook them up to sliders or text inputs.
 - **Native History Tab**: Browse past generations, view their settings (prompt, sampler info), and save/delete them.
 
-## How to use it 📖
+## How to use it 
 
 1. **Setup your server**:
    Open a terminal and run your ComfyUI with the listen flag:
