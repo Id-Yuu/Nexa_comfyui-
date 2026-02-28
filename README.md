@@ -1,6 +1,6 @@
-# Nexa - Your On-the-Go ComfyUI Companion
-
 ![Nexa Screenshot](./assets/Banner.png)
+
+# Nexa - Your On-the-Go ComfyUI Companion
 
 A sleek, responsive React Native mobile app that connects directly to your local ComfyUI server. Generate images from your phone, build dynamic UIs from JSON workflows, upload images to LoadImage nodes.
 
