@@ -1,0 +1,25 @@
+import React from 'react';
+import { Modal, View, Text, TouchableOpacity } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
+import { globalStyles as styles } from '../../styles/globalStyles';
+
+export const TutorialModal = ({ visible, step, setStep, onClose }) => {
+  return (
+    <Modal visible={visible} animationType="fade" transparent={true}>
+      <View style={styles.overlay}>
+        <View style={[styles.popup, { width: '95%', paddingVertical: 30 }]}>
+          {step === 0 && (<View><Text style={[styles.title, { marginBottom: 15, fontSize: 24 }]}>1. Server Setup</Text><Text style={styles.tutorialText}>Open an empty workflow inside ComfyUI and make sure your server is running.</Text><Text style={styles.tutorialText}>You MUST use the <Text style={{ color: '#0A84FF', fontWeight: 'bold' }}>--listen</Text> flag (e.g. <Text style={{ fontFamily: 'monospace', backgroundColor: '#333', padding: 2 }}>python main.py --listen</Text>) so the app can connect.</Text><Text style={styles.tutorialText}>Go back to the <Text style={{ color: '#0A84FF', fontWeight: 'bold' }}>Settings</Text> tab in this app and enter your Local IP Address plus Port (usually 8188).</Text></View>)}
+          {step === 1 && (<View><Text style={[styles.title, { marginBottom: 15, fontSize: 24 }]}>2. Workflow API Format</Text><Text style={styles.tutorialText}>In ComfyUI desktop, click the <Text style={{ color: '#0A84FF', fontWeight: 'bold' }}>Settings (Gear icon)</Text>.</Text><Text style={styles.tutorialText}>Enable the <Text style={{ color: '#0A84FF', fontWeight: 'bold' }}>Enable Dev mode Options</Text> checkbox.</Text><Text style={styles.tutorialText}>You will now see a new button on the menu called <Text style={{ color: '#0A84FF', fontWeight: 'bold' }}>Save (API format)</Text>. Use this to download the special JSON file you need.</Text></View>)}
+          {step === 2 && (<View><Text style={[styles.title, { marginBottom: 15, fontSize: 24 }]}>3. Importing to App</Text><Text style={styles.tutorialText}>Open the <Text style={{ color: '#0A84FF', fontWeight: 'bold' }}>Workflows</Text> tab in this app and press <Text style={{ color: '#0A84FF', fontWeight: 'bold' }}>+ Create New Workflow</Text>.</Text><Text style={styles.tutorialText}>Give it a name, and paste your saved JSON code into the <Text style={{ color: '#0A84FF', fontWeight: 'bold' }}>API JSON Code</Text> text box.</Text><Text style={styles.tutorialText}>Press <Text style={{ color: '#0A84FF', fontWeight: 'bold' }}>Analyze for Auto-Detect</Text>. Look at the node numbers to identify which prompt is positive/negative and which image is which!</Text><Text style={styles.tutorialText}>You can change the order of the auto-detected nodes using the up/down arrows so they render in your preferred layout. Then <Text style={{ color: '#0A84FF', fontWeight: 'bold' }}>Save Workflow</Text>.</Text></View>)}
+          {step === 3 && (<View><Text style={[styles.title, { marginBottom: 15, fontSize: 24 }]}>4. Custom Overrides</Text><Text style={styles.tutorialText}>Want custom controls? Replace a value in your ComfyUI strings right before saving with a magic string, like <Text style={{ fontFamily: 'monospace', color: '#0A84FF' }}>"%my_seed%"</Text> or <Text style={{ fontFamily: 'monospace', color: '#0A84FF' }}>"%style%"</Text>.</Text><Text style={styles.tutorialText}>When making the workflow in the app, add a <Text style={{ color: '#0A84FF', fontWeight: 'bold' }}>Custom Placeholder</Text>. Put your exact magic string in the Trigger Word box (include the quotes).</Text><Text style={styles.tutorialText}>Now when you generate, the app swaps your UI input straight into the workflow!</Text></View>)}
+          <View style={[styles.row, { marginTop: 30, justifyContent: 'space-between' }]}>
+            {step > 0 ? (<TouchableOpacity style={[styles.primaryBtn, { backgroundColor: '#333', paddingVertical: 12, paddingHorizontal: 20 }]} onPress={() => setStep(step - 1)}><Text style={styles.primaryBtnText}>Back</Text></TouchableOpacity>) : <View style={{ width: 80 }} />}
+            <View style={styles.row}>{[0, 1, 2, 3].map(dot => (<View key={`dot_${dot}`} style={{ width: 8, height: 8, borderRadius: 4, backgroundColor: step === dot ? '#0A84FF' : '#444', marginHorizontal: 4 }} />))}</View>
+            {step < 3 ? (<TouchableOpacity style={[styles.primaryBtn, { paddingVertical: 12, paddingHorizontal: 20 }]} onPress={() => setStep(step + 1)}><Text style={styles.primaryBtnText}>Next</Text></TouchableOpacity>) : (<TouchableOpacity style={[styles.primaryBtn, { paddingVertical: 12, paddingHorizontal: 20 }]} onPress={onClose}><Text style={styles.primaryBtnText}>Done</Text></TouchableOpacity>)}
+          </View>
+          <TouchableOpacity style={{ position: 'absolute', top: 15, right: 15 }} onPress={onClose}><Ionicons name="close-circle" size={28} color="#888" /></TouchableOpacity>
+        </View>
+      </View>
+    </Modal>
+  );
+};
