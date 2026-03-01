@@ -16,6 +16,10 @@ Just give it an workflow JSON file from ComfyUI, and it auto-detects your Prompt
 - **Custom Overrides**: Add your own custom variables like `%my_seed%` and hook them up to sliders or text inputs.
 - **Native History Tab**: Browse past generations, view their settings (prompt, sampler info), and save/delete them.
 
+## Screenshots
+
+(./Screenshots/2.png)(./Screenshots/4.png)(./Screenshots/5.png)(./Screenshots/6.png)(./Screenshots/7.png)
+
 ## How to use it 
 
 1. **Setup your server**:
