@@ -18,7 +18,14 @@ Just give it an workflow JSON file from ComfyUI, and it auto-detects your Prompt
 
 ## Screenshots
 
-![Nexa Screenshot](./Screenshots/2.jpg)![Nexa Screenshot](./Screenshots/4.jpg)![Nexa Screenshot](./Screenshots/5.jpg)![Nexa Screenshot](./Screenshots/6.jpg)![Nexa Screenshot](./Screenshots/7.jpg)
+<p align="center">
+  <img src="./Screenshots/2.jpg" width="18%" />
+  <img src="./Screenshots/4.jpg" width="18%" />
+  <img src="./Screenshots/5.jpg" width="18%" />
+  <img src="./Screenshots/6.jpg" width="18%" />
+  <img src="./Screenshots/7.jpg" width="18%" />
+</p>
+
 
 ## How to use it 
 
